@@ -88,6 +88,22 @@ void MX_USART1_UART_Init(void)
 
 }
 
+void USART1_Send (char chr){
+
+	while (!(USART1->SR & USART_SR_TC));
+	USART1->DR = chr;
+
+}
+
+void USART1_Send_String (char* str){
+
+	uint8_t i = 0;
+
+	while(str[i])
+	USART1_Send (str[i++]);
+
+}
+
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */

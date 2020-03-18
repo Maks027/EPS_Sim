@@ -69,6 +69,10 @@ extern void _Error_Handler(char *, int);
 
 void MX_USART1_UART_Init(void);
 
+void USART1_Send (char chr);
+
+void USART1_Send_String (char* str);
+
 /* USER CODE BEGIN Prototypes */
 
 /* USER CODE END Prototypes */
