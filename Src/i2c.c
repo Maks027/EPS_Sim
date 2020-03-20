@@ -2,6 +2,8 @@
 #include "i2c.h"
 #include "gpio.h"
 
+uint8_t i2c_data = 0x11;
+
 void MX_I2C1_Init(void)
 {
   LL_I2C_InitTypeDef I2C_InitStruct;
@@ -44,4 +46,3 @@ void MX_I2C1_Init(void)
   LL_I2C_SetOwnAddress2(I2C1, 0);
 
 }
-

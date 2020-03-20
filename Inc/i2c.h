@@ -11,6 +11,8 @@ extern void _Error_Handler(char *, int);
 
 void MX_I2C1_Init(void);
 
+extern uint8_t i2c_data;
+
 #ifdef __cplusplus
 }
 #endif

@@ -22,7 +22,10 @@ int main(void)
 
 	while (1)
 	{
+		USART1_Send(i2c_data);
 		
+		
+		LL_mDelay(100);
 	}
 	
 
