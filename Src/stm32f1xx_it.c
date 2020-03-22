@@ -11,15 +11,15 @@ void SysTick_Handler(void)
 
 void I2C1_EV_IRQHandler(void)
 {
-	if((I2C1->SR1 & I2C_SR1_ADDR) && !(I2C1->SR1 & I2C_SR2_TRA)){
+
+	
+	while(!LL_I2C_IsActiveFlag_ADDR(I2C1)){};
+	LL_I2C_ClearFlag_ADDR(I2C1);
+	
+	while(!LL_I2C_IsActiveFlag_RXNE(I2C1)){};
+	i2c_data = I2C1->DR;
 		
-		while(!(I2C1-> SR1 & I2C_SR1_RXNE)){};
-			
-		i2c_data = I2C1->DR;
-			
-		I2C1->CR1 |= I2C_CR1_STOP;
-			
-	}
+	LL_I2C_ClearFlag_STOP(I2C1);
 	
 }
 
