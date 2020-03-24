@@ -19,11 +19,11 @@
 
 extern void _Error_Handler(char *, int);
 
-void MX_USART1_UART_Init(void);
+void MX_USART3_UART_Init(void);
 
-void USART1_Send (char chr);
+void USART3_Send (char chr);
 
-void USART1_Send_String (char* str);
+void USART3_Send_String (char* str);
 
 #ifdef __cplusplus
 }

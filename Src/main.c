@@ -18,14 +18,14 @@ int main(void)
 	LL_Init1msTick(72000000);
 	MX_GPIO_Init();
 	MX_I2C1_Init();
-	MX_USART1_UART_Init();
-
+	MX_USART3_UART_Init();
+	
 	while (1)
 	{
-		USART1_Send(i2c_data);
+		//USART3_Send(i2c_data);
+//		LL_GPIO_SetOutputPin(GPIOC, LL_GPIO_PIN_13);
 		
-		
-		LL_mDelay(100);
+		//LL_mDelay(100);
 	}
 	
 
